@@ -1,0 +1,36 @@
+# Node.js dependencies
+node_modules/
+
+# Build outputs
+dist/
+lib/
+out/
+esm/
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage & test reports
+coverage/
+playwright-report/
+cypress/videos/
+cypress/screenshots/
+
+# Tool caches
+.eslintcache
+.parcel-cache/
+.rpt2_cache/
+.ts-node-cache/
+
+# VSCode settings
+.vscode/
+.history/
+
+# OS-specific
+.DS_Store
+Thumbs.db
