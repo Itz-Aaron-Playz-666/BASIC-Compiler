@@ -1,0 +1,20 @@
+name: Upload BASIC Compiler
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3.2.2
+        with:
+          name: "BASIC Compiler"
+          path: "./index.html"
+          if-no-files-found: error
+          retention-days: 90
+          include-hidden-files: true
