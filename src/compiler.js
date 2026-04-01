@@ -1,1 +1,1 @@
-import { keywords } from "BASICFuctions/setDefiner.js";
+import { BASIC_DIALECT_SETS } from "BASICFuctions/setDefiner.js";
