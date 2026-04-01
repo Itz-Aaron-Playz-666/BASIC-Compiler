@@ -1,4 +1,4 @@
-name: Upload BASIC Compiler
+name: Upload Build Artifacts
 
 on:
   workflow_dispatch:
@@ -10,11 +10,60 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Upload a Build Artifact
+      # Mobile builds
+      - name: Upload iOS IPA
         uses: actions/upload-artifact@v4
         with:
-          name: "BASIC Compiler"
-          path: "./index.html"
-          if-no-files-found: error
-          retention-days: 90
-          include-hidden-files: true
+          name: "App-iOS-IPA"
+          path: "./builds/app.ipa"
+
+      - name: Upload Android APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: "App-Android-APK"
+          path: "./builds/app.apk"
+
+      # macOS builds
+      - name: Upload macOS DMG
+        uses: actions/upload-artifact@v4
+        with:
+          name: "App-macOS-DMG"
+          path: "./builds/app.dmg"
+
+      - name: Upload macOS PKG
+        uses: actions/upload-artifact@v4
+        with:
+          name: "App-macOS-PKG"
+          path: "./builds/app.pkg"
+
+      # Windows builds
+      - name: Upload Windows EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: "App-Windows-EXE"
+          path: "./builds/app.exe"
+
+      # Cross-platform archives
+      - name: Upload x64 tar.gz
+        uses: actions/upload-artifact@v4
+        with:
+          name: "App-x64-tar.gz"
+          path: "./dist/x64/app.tar.gz"
+
+      - name: Upload x64 zip
+        uses: actions/upload-artifact@v4
+        with:
+          name: "App-x64-zip"
+          path: "./dist/x64/app.zip"
+
+      - name: Upload x86 tar.gz
+        uses: actions/upload-artifact@v4
+        with:
+          name: "App-x86-tar.gz"
+          path: "./dist/x86/app.tar.gz"
+
+      - name: Upload x86 zip
+        uses: actions/upload-artifact@v4
+        with:
+          name: "App-x86-zip"
+          path: "./dist/x86/app.zip"
