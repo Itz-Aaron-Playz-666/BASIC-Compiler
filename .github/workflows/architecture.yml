@@ -10,60 +10,60 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Mobile builds
+      # Mobile formats
       - name: Upload iOS IPA
         uses: actions/upload-artifact@v4
         with:
           name: "App-iOS-IPA"
-          path: "./builds/app.ipa"
+          path: "./index.html"
 
       - name: Upload Android APK
         uses: actions/upload-artifact@v4
         with:
           name: "App-Android-APK"
-          path: "./builds/app.apk"
+          path: "./index.html"
 
-      # macOS builds
+      # macOS formats
       - name: Upload macOS DMG
         uses: actions/upload-artifact@v4
         with:
           name: "App-macOS-DMG"
-          path: "./builds/app.dmg"
+          path: "./index.html"
 
       - name: Upload macOS PKG
         uses: actions/upload-artifact@v4
         with:
           name: "App-macOS-PKG"
-          path: "./builds/app.pkg"
+          path: "./index.html"
 
-      # Windows builds
+      # Windows format
       - name: Upload Windows EXE
         uses: actions/upload-artifact@v4
         with:
           name: "App-Windows-EXE"
-          path: "./builds/app.exe"
+          path: "./index.html"
 
       # Cross-platform archives
       - name: Upload x64 tar.gz
         uses: actions/upload-artifact@v4
         with:
           name: "App-x64-tar.gz"
-          path: "./dist/x64/app.tar.gz"
+          path: "./index.html"
 
       - name: Upload x64 zip
         uses: actions/upload-artifact@v4
         with:
           name: "App-x64-zip"
-          path: "./dist/x64/app.zip"
+          path: "./index.html"
 
       - name: Upload x86 tar.gz
         uses: actions/upload-artifact@v4
         with:
           name: "App-x86-tar.gz"
-          path: "./dist/x86/app.tar.gz"
+          path: "./index.html"
 
       - name: Upload x86 zip
         uses: actions/upload-artifact@v4
         with:
           name: "App-x86-zip"
-          path: "./dist/x86/app.zip"
+          path: "./index.html"
