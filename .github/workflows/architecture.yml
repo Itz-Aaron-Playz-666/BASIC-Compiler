@@ -10,11 +10,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Mobile formats
+      # Define a reusable file list
       - name: Upload iOS IPA
         uses: actions/upload-artifact@v4
         with:
-          name: "App-iOS-IPA"
+          name: "App-iOS.ipa"
           path: |
             index.html
             compiler.html
@@ -22,13 +22,13 @@ jobs:
             styles.css
             src/**
             docs/**
-            LICENSE
             README.md
+            LICENSE
 
       - name: Upload Android APK
         uses: actions/upload-artifact@v4
         with:
-          name: "App-Android-APK"
+          name: "App-Android.apk"
           path: |
             index.html
             compiler.html
@@ -36,14 +36,13 @@ jobs:
             styles.css
             src/**
             docs/**
-            LICENSE
             README.md
+            LICENSE
 
-      # macOS formats
       - name: Upload macOS DMG
         uses: actions/upload-artifact@v4
         with:
-          name: "App-macOS-DMG"
+          name: "App-macOS.dmg"
           path: |
             index.html
             compiler.html
@@ -51,13 +50,13 @@ jobs:
             styles.css
             src/**
             docs/**
-            LICENSE
             README.md
+            LICENSE
 
       - name: Upload macOS PKG
         uses: actions/upload-artifact@v4
         with:
-          name: "App-macOS-PKG"
+          name: "App-macOS.pkg"
           path: |
             index.html
             compiler.html
@@ -65,14 +64,13 @@ jobs:
             styles.css
             src/**
             docs/**
-            LICENSE
             README.md
+            LICENSE
 
-      # Windows format
       - name: Upload Windows EXE
         uses: actions/upload-artifact@v4
         with:
-          name: "App-Windows-EXE"
+          name: "App-Windows.exe"
           path: |
             index.html
             compiler.html
@@ -80,14 +78,13 @@ jobs:
             styles.css
             src/**
             docs/**
-            LICENSE
             README.md
+            LICENSE
 
-      # Cross-platform archives
       - name: Upload x64 tar.gz
         uses: actions/upload-artifact@v4
         with:
-          name: "App-x64-tar.gz"
+          name: "App-x64.tar.gz"
           path: |
             index.html
             compiler.html
@@ -95,13 +92,13 @@ jobs:
             styles.css
             src/**
             docs/**
-            LICENSE
             README.md
+            LICENSE
 
       - name: Upload x64 zip
         uses: actions/upload-artifact@v4
         with:
-          name: "App-x64-zip"
+          name: "App-x64.zip"
           path: |
             index.html
             compiler.html
@@ -109,13 +106,13 @@ jobs:
             styles.css
             src/**
             docs/**
-            LICENSE
             README.md
+            LICENSE
 
       - name: Upload x86 tar.gz
         uses: actions/upload-artifact@v4
         with:
-          name: "App-x86-tar.gz"
+          name: "App-x86.tar.gz"
           path: |
             index.html
             compiler.html
@@ -123,13 +120,13 @@ jobs:
             styles.css
             src/**
             docs/**
-            LICENSE
             README.md
+            LICENSE
 
       - name: Upload x86 zip
         uses: actions/upload-artifact@v4
         with:
-          name: "App-x86-zip"
+          name: "App-x86.zip"
           path: |
             index.html
             compiler.html
@@ -137,5 +134,5 @@ jobs:
             styles.css
             src/**
             docs/**
-            LICENSE
             README.md
+            LICENSE
